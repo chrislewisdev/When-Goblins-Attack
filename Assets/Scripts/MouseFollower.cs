@@ -10,6 +10,8 @@ public class MouseFollower : MonoBehaviour
 	private float MaxSpeed = 1f;
 	[SerializeField]
 	private float GoodEnoughRange = 5f;
+	[SerializeField]
+	private float SlowdownSpeed = 0.25f;
 
 	private new Rigidbody2D rigidbody;
 	private Animator animator;
@@ -32,18 +34,25 @@ public class MouseFollower : MonoBehaviour
 		targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		targetPosition.z = 0;
 
-		if ((transform.position - targetPosition).magnitude > GoodEnoughRange)
+        float distanceToTarget = (transform.position - targetPosition).magnitude;
+		if (distanceToTarget > GoodEnoughRange)
 		{
-			rigidbody.MovePosition(Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed));
+			// rigidbody.MovePosition(Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed));
+			Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed);
+			rigidbody.velocity = velocity;
 		}
 		else
 		{
-			velocity = rigidbody.velocity;
+			rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, Vector2.zero, SlowdownSpeed * Time.deltaTime);
 		}
+		// else 
+		// {
+		// 	velocity = rigidbody.velocity;
+		// }
 
 		sprite.flipX = velocity.x < 0;
 
-		animator.SetFloat("velocity", velocity.magnitude);
+		animator.SetFloat("velocity", rigidbody.velocity.magnitude);
 	}
 
 	void OnDrawGizmos()
