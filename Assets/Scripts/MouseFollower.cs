@@ -18,7 +18,6 @@ public class MouseFollower : MonoBehaviour
 	private SpriteRenderer sprite;
 
 	private Vector3 targetPosition;
-	private Vector3 velocity;
 
 	// Use this for initialization
 	void Start () 
@@ -37,7 +36,7 @@ public class MouseFollower : MonoBehaviour
         float distanceToTarget = (transform.position - targetPosition).magnitude;
 		if (distanceToTarget > GoodEnoughRange)
 		{
-			// rigidbody.MovePosition(Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed));
+			Vector3 velocity = rigidbody.velocity;
 			Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed);
 			rigidbody.velocity = velocity;
 		}
@@ -45,12 +44,8 @@ public class MouseFollower : MonoBehaviour
 		{
 			rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, Vector2.zero, SlowdownSpeed * Time.deltaTime);
 		}
-		// else 
-		// {
-		// 	velocity = rigidbody.velocity;
-		// }
 
-		sprite.flipX = velocity.x < 0;
+		sprite.flipX = rigidbody.velocity.x < 0;
 
 		animator.SetFloat("velocity", rigidbody.velocity.magnitude);
 	}
