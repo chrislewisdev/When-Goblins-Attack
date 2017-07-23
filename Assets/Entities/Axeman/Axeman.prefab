@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 114583876103124502}
   - component: {fileID: 61517543139232004}
   - component: {fileID: 50576350329024252}
+  - component: {fileID: 114148651878793112}
+  - component: {fileID: 114393159703353948}
+  - component: {fileID: 114361895475478716}
   m_Layer: 0
   m_Name: Axeman
   m_TagString: Untagged
@@ -55,7 +58,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 5
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -106,6 +109,40 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114148651878793112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848971211474590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc307a7e0472bfc459910d550702c814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114361895475478716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848971211474590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03802fc48cb0a824a977cb70bde48257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackRange: 1
+--- !u!114 &114393159703353948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848971211474590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8359b30fa4787424cb784e991a35c18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114583876103124502
 MonoBehaviour:
   m_ObjectHideFlags: 1

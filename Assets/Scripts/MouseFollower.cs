@@ -14,8 +14,6 @@ public class MouseFollower : MonoBehaviour
 	private float SlowdownSpeed = 0.25f;
 
 	private new Rigidbody2D rigidbody;
-	private Animator animator;
-	private SpriteRenderer sprite;
 
 	private Vector3 targetPosition;
 
@@ -23,8 +21,6 @@ public class MouseFollower : MonoBehaviour
 	void Start () 
 	{
 		rigidbody = GetComponent<Rigidbody2D>();
-		animator = GetComponent<Animator>();
-		sprite = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -44,10 +40,6 @@ public class MouseFollower : MonoBehaviour
 		{
 			rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, Vector2.zero, SlowdownSpeed * Time.deltaTime);
 		}
-
-		sprite.flipX = rigidbody.velocity.x < 0;
-
-		animator.SetFloat("velocity", rigidbody.velocity.magnitude);
 	}
 
 	void OnDrawGizmos()
