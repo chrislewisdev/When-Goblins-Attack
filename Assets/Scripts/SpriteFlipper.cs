@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpriteFlipper : MonoBehaviour 
 {
+	[SerializeField]
+	private float ThresholdVelocity = 0.1f;
+
 	private new Rigidbody2D rigidbody;
 	private SpriteRenderer sprite;
 
@@ -17,6 +20,9 @@ public class SpriteFlipper : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		sprite.flipX = rigidbody.velocity.x < 0;
+		if (Mathf.Abs(rigidbody.velocity.x) > ThresholdVelocity)
+		{
+			sprite.flipX = rigidbody.velocity.x < 0;
+		}
 	}
 }

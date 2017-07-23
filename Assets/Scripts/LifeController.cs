@@ -7,12 +7,12 @@ public class LifeController : MonoBehaviour
 	[SerializeField]
 	private float DeathLength = 1f;
 
-	public bool Alive { get; private set; }
+	public bool IsAlive { get; private set; }
 
     // Use this for initialization
     void Start()
     {
-		Alive = true;
+		IsAlive = true;
     }
 
     // Update is called once per frame
@@ -23,12 +23,12 @@ public class LifeController : MonoBehaviour
 
 	public void ReceiveDamage()
 	{
-		if (Alive)
-		{
-			Alive = false;
-			GetComponent<Rigidbody2D>().simulated = false;
+		// if (Alive)
+		// {
+		// 	Alive = false;
+		// 	GetComponent<Rigidbody2D>().simulated = false;
 
-			GameObject.Destroy(gameObject, DeathLength);
-		}
+		// 	GameObject.Destroy(gameObject, DeathLength);
+		// }
 	}
 }

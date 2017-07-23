@@ -7,7 +7,11 @@ public class AttackController : MonoBehaviour
     [SerializeField]
     private float AttackRange = 1f;
     [SerializeField]
+    private float AttackDuration = 1f;
+    [SerializeField]
     private bool DrawGizmos = true;
+
+    public bool IsAttacking { get; private set; }
 
     // Use this for initialization
     void Start()
@@ -18,16 +22,28 @@ public class AttackController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Collider2D enemy = Physics2D.OverlapCircle(transform.position, AttackRange, 1 << LayerMask.NameToLayer("Enemy"));
-
-		if (enemy)
+        if (!IsAttacking)
         {
-            LifeController lifeController = enemy.gameObject.GetComponent<LifeController>();
-            if (lifeController && lifeController.Alive)
+            Collider2D enemy = Physics2D.OverlapCircle(transform.position, AttackRange, 1 << LayerMask.NameToLayer("Enemy"));
+
+            if (enemy)
             {
-				lifeController.ReceiveDamage();
+                LifeController lifeController = enemy.gameObject.GetComponent<LifeController>();
+                if (lifeController && lifeController.IsAlive)
+                {
+                    StartCoroutine(PerformAttack(lifeController));
+                }
             }
         }
+
+    }
+
+    private IEnumerator PerformAttack(LifeController target)
+    {
+        IsAttacking = true;
+        target.ReceiveDamage();
+        yield return new WaitForSeconds(AttackDuration);
+        IsAttacking = false;
     }
 
     void OnDrawGizmos()
