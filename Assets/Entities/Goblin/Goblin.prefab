@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 95497036119786220}
   - component: {fileID: 114143861349678086}
   - component: {fileID: 114495664457852050}
+  - component: {fileID: 114608373858438676}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Untagged
@@ -39,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712050043965262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8903294, y: 3.2671247, z: 0.009765625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.8903294, y: 3.2671247, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathLength: 3
+  BaseHealth: 5
 --- !u!114 &114495664457852050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +130,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8359b30fa4787424cb784e991a35c18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114608373858438676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712050043965262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86fb227e29d6f045b7940b7d00a1074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212835718987435242

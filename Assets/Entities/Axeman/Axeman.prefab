@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114393159703353948}
   - component: {fileID: 114361895475478716}
   - component: {fileID: 114320325896168974}
+  - component: {fileID: 114567084914419616}
   m_Layer: 0
   m_Name: Axeman
   m_TagString: Untagged
@@ -43,7 +44,7 @@ Transform:
   m_GameObject: {fileID: 1848971211474590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.51, y: -0.59, z: 0}
-  m_LocalScale: {x: 2.7803917, y: 2.7803917, z: 2.7803917}
+  m_LocalScale: {x: 3.5977955, y: 3.5977955, z: 3.5977955}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -134,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathLength: 1
+  BaseHealth: 5
 --- !u!114 &114361895475478716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03802fc48cb0a824a977cb70bde48257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 0.52
+  AttackRange: 0.65
   AttackDuration: 0.6
   DrawGizmos: 1
 --- !u!114 &114393159703353948
@@ -157,6 +159,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8359b30fa4787424cb784e991a35c18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114567084914419616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848971211474590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86fb227e29d6f045b7940b7d00a1074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114583876103124502

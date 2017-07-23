@@ -6,13 +6,21 @@ public class LifeController : MonoBehaviour
 {
 	[SerializeField]
 	private float DeathLength = 1f;
+	[SerializeField]
+	private float BaseHealth = 5f;
 
 	public bool IsAlive { get; private set; }
+	public float Health { get; private set; }
+
+	private Animator animator;
 
     // Use this for initialization
     void Start()
     {
 		IsAlive = true;
+		Health = BaseHealth;
+
+		animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,12 +31,19 @@ public class LifeController : MonoBehaviour
 
 	public void ReceiveDamage()
 	{
-		// if (Alive)
-		// {
-		// 	Alive = false;
-		// 	GetComponent<Rigidbody2D>().simulated = false;
+		if (IsAlive)
+		{
+			Health -= 1.0f;
 
-		// 	GameObject.Destroy(gameObject, DeathLength);
-		// }
+			animator.Play("Flash", animator.GetLayerIndex("Effects"));
+
+			if (Health <= 0)
+			{
+				IsAlive = false;
+				GetComponent<Rigidbody2D>().simulated = false;
+
+				GameObject.Destroy(gameObject, DeathLength);
+			}
+		}
 	}
 }
