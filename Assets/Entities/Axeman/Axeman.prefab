@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114148651878793112}
   - component: {fileID: 114393159703353948}
   - component: {fileID: 114361895475478716}
+  - component: {fileID: 114320325896168974}
   m_Layer: 0
   m_Name: Axeman
   m_TagString: Untagged
@@ -120,6 +121,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc307a7e0472bfc459910d550702c814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114320325896168974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848971211474590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f05528bb11b184b95e662c238b3fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathLength: 1
 --- !u!114 &114361895475478716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03802fc48cb0a824a977cb70bde48257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 1
+  AttackRange: 0.52
+  DrawGizmos: 1
 --- !u!114 &114393159703353948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,6 +172,7 @@ MonoBehaviour:
   MaxSpeed: 5
   GoodEnoughRange: 1.5
   SlowdownSpeed: 7
+  DrawGizmos: 0
 --- !u!212 &212255121571181432
 SpriteRenderer:
   m_ObjectHideFlags: 1
