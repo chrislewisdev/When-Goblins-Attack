@@ -10,21 +10,25 @@ public class AttackController : MonoBehaviour
     private float AttackDuration = 1f;
     [SerializeField]
     private bool DrawGizmos = true;
+    [SerializeField]
+    private LayerMask TargetLayer;
+
+    private LifeController lifeController;
 
     public bool IsAttacking { get; private set; }
 
     // Use this for initialization
     void Start()
     {
-
+        lifeController = GetComponent<LifeController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!IsAttacking)
+        if (!IsAttacking && lifeController.IsAlive)
         {
-            Collider2D enemy = Physics2D.OverlapCircle(transform.position, AttackRange, 1 << LayerMask.NameToLayer("Enemy"));
+            Collider2D enemy = Physics2D.OverlapCircle(transform.position, AttackRange, TargetLayer);
 
             if (enemy)
             {

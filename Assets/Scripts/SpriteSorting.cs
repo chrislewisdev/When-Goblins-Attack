@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SpriteSorting : MonoBehaviour
 {
-	private SpriteRenderer sprite;
+    private SpriteRenderer sprite;
 
     // Use this for initialization
     void Start()
     {
-		sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		sprite.sortingOrder = (int)(-transform.position.y * 100);
+        sprite.sortingOrder = (int)(-transform.position.y * 100);
     }
 }
