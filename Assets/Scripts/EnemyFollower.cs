@@ -38,18 +38,22 @@ public class EnemyFollower : MonoBehaviour
 		{
 			targetPosition = nearestEnemy.transform.position;
 			targetPosition.z = 0;
+		}
+		else
+		{
+			targetPosition = transform.position;
+		}
 
-			float distanceToTarget = (transform.position - targetPosition).magnitude;
-			if (distanceToTarget > GoodEnoughRange)
-			{
-				Vector3 velocity = rigidbody.velocity;
-				Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed);
-				rigidbody.velocity = velocity;
-			}
-			else
-			{
-				rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, Vector2.zero, SlowdownSpeed * Time.deltaTime);
-			}
+		float distanceToTarget = (transform.position - targetPosition).magnitude;
+		if (distanceToTarget > GoodEnoughRange)
+		{
+			Vector3 velocity = rigidbody.velocity;
+			Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed);
+			rigidbody.velocity = velocity;
+		}
+		else
+		{
+			rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, Vector2.zero, SlowdownSpeed * Time.deltaTime);
 		}
     }
 
