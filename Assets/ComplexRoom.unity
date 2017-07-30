@@ -7304,10 +7304,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 20191588945285866, guid: aac09503463b31d448df078f7e4b6c15,
+    - target: {fileID: 114084195941995168, guid: aac09503463b31d448df078f7e4b6c15,
         type: 2}
-      propertyPath: orthographic size
-      value: 8.4375
+      propertyPath: MouseBounds.x
+      value: 15.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 114084195941995168, guid: aac09503463b31d448df078f7e4b6c15,
+        type: 2}
+      propertyPath: MouseBounds.y
+      value: 7.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aac09503463b31d448df078f7e4b6c15, type: 2}

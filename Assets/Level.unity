@@ -2103,7 +2103,7 @@ Tilemap:
   - first: {x: -7, y: 3, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2416,8 +2416,8 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300064, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 102
     m_Data: {fileID: 21300100, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
   - m_RefCount: 1
@@ -2448,8 +2448,8 @@ Tilemap:
     m_Data: {fileID: 21300196, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300198, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300064, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 160
     m_Data:
@@ -3753,7 +3753,7 @@ Tilemap:
   - first: {x: -7, y: 4, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4036,8 +4036,8 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300032, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 14
     m_Data: {fileID: 21300016, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
   - m_RefCount: 10
@@ -4056,8 +4056,8 @@ Tilemap:
     m_Data: {fileID: 21300140, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300108, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300032, guid: c039d8f08aa929c4bbd29ff55105236b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 64
     m_Data:

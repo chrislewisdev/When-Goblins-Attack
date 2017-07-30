@@ -12,6 +12,8 @@ public class AttackController : MonoBehaviour
     private bool DrawGizmos = true;
     [SerializeField]
     private LayerMask TargetLayer;
+    [SerializeField]
+    private AudioClip AttackSound;
 
     private LifeController lifeController;
 
@@ -44,6 +46,11 @@ public class AttackController : MonoBehaviour
 
     private IEnumerator PerformAttack(LifeController target)
     {
+        if (AttackSound)
+        {
+            AudioSource.PlayClipAtPoint(AttackSound, Camera.main.transform.position, 0.4f);
+        }
+
         IsAttacking = true;
         target.ReceiveDamage();
         yield return new WaitForSeconds(AttackDuration);

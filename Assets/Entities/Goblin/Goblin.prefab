@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathLength: 3
   BaseHealth: 2
+  DeathSound: {fileID: 8300000, guid: 696e1b57768c3354cb4fcbf4f377884a, type: 3}
 --- !u!114 &114495664457852050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,6 +183,7 @@ MonoBehaviour:
   TargetLayer:
     serializedVersion: 2
     m_Bits: 512
+  AttackSound: {fileID: 8300000, guid: b6decd230ae8658408becbc25d5e6bce, type: 3}
 --- !u!212 &212835718987435242
 SpriteRenderer:
   m_ObjectHideFlags: 1

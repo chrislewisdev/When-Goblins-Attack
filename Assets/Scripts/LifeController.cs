@@ -8,6 +8,8 @@ public class LifeController : MonoBehaviour
 	private float DeathLength = 1f;
 	[SerializeField]
 	private float BaseHealth = 5f;
+	[SerializeField]
+	private AudioClip DeathSound;
 
 	public bool IsAlive { get; private set; }
 	public float Health { get; private set; }
@@ -39,6 +41,11 @@ public class LifeController : MonoBehaviour
 
 			if (Health <= 0)
 			{
+				if (DeathSound)
+				{
+					AudioSource.PlayClipAtPoint(DeathSound, Camera.main.transform.position, 0.4f);
+				}
+
 				IsAlive = false;
 				GetComponent<Rigidbody2D>().simulated = false;
 
