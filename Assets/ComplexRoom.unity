@@ -7241,6 +7241,11 @@ Prefab:
       propertyPath: MaxSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114660258370770914, guid: 57145c7a943ad5c4ab00fabf7d1de2b4,
+        type: 2}
+      propertyPath: DrawGizmos
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57145c7a943ad5c4ab00fabf7d1de2b4, type: 2}
   m_IsPrefabParent: 0

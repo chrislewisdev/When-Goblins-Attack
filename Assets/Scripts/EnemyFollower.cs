@@ -2,71 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollower : MonoBehaviour
+public class EnemyFollower : Follower
 {
 	[SerializeField]
 	private float AggroRange = 5f;
 	[SerializeField]
 	private LayerMask TargetLayer;
-	[SerializeField]
-    private float SmoothTime = 0.5f;
-    [SerializeField]
-    private float MaxSpeed = 1f;
-    [SerializeField]
-    private float GoodEnoughRange = 5f;
-    [SerializeField]
-    private float SlowdownSpeed = 0.25f;
-    [SerializeField]
-    private bool DrawGizmos = true;
 
-    private new Rigidbody2D rigidbody;
-
-    private Vector3 targetPosition;
-
-    // Use this for initialization
-    void Start()
+    protected override Vector3 GetTargetPosition()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		Collider2D nearestEnemy = Physics2D.OverlapCircle(transform.position, AggroRange, TargetLayer);
+        Collider2D nearestEnemy = Physics2D.OverlapCircle(transform.position, AggroRange, TargetLayer);
 
 		if (nearestEnemy)
 		{
-			targetPosition = nearestEnemy.transform.position;
-			targetPosition.z = 0;
+			return nearestEnemy.transform.position;
 		}
 		else
 		{
-			targetPosition = transform.position;
-		}
-
-		float distanceToTarget = (transform.position - targetPosition).magnitude;
-		if (distanceToTarget > GoodEnoughRange)
-		{
-			Vector3 velocity = rigidbody.velocity;
-			Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, SmoothTime, MaxSpeed);
-			rigidbody.velocity = velocity;
-		}
-		else
-		{
-			rigidbody.velocity = Vector2.MoveTowards(rigidbody.velocity, Vector2.zero, SlowdownSpeed * Time.deltaTime);
+			return transform.position;
 		}
     }
 
-    void OnDrawGizmos()
+    protected override void OnDrawGizmos()
     {
-		if (DrawGizmos)
+		base.OnDrawGizmos();
+		
+		if (ShouldDrawGizmos)
         {
 			Gizmos.color = Color.red;
 			Gizmos.DrawWireSphere(transform.position, AggroRange);
-
-			Gizmos.color = Color.white;
-            Gizmos.DrawLine(transform.position, targetPosition);
-            Gizmos.DrawWireSphere(targetPosition, GoodEnoughRange);
         }
     }
 }
