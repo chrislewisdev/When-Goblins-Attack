@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 614135602}
   - component: {fileID: 614135601}
   - component: {fileID: 614135600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Void
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3087,7 +3087,7 @@ GameObject:
   - component: {fileID: 633500425}
   - component: {fileID: 633500424}
   - component: {fileID: 633500423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5964,18 +5964,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4724775162421196, guid: f696a9479f3488b48acaf65f75848ab6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.5978
-      objectReference: {fileID: 0}
-    - target: {fileID: 4724775162421196, guid: f696a9479f3488b48acaf65f75848ab6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3.5978
-      objectReference: {fileID: 0}
-    - target: {fileID: 4724775162421196, guid: f696a9479f3488b48acaf65f75848ab6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3.5978
-      objectReference: {fileID: 0}
     - target: {fileID: 1848971211474590, guid: f696a9479f3488b48acaf65f75848ab6, type: 2}
       propertyPath: m_Name
       value: Axeman (10)
@@ -6243,7 +6231,7 @@ GameObject:
   - component: {fileID: 840249475}
   - component: {fileID: 840249474}
   - component: {fileID: 840249473}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dressing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6701,15 +6689,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 4, y: -3, z: 0}
-    second:
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 10, y: -3, z: 0}
     second:
       m_TileIndex: 6
@@ -6739,8 +6718,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 4, y: -2, z: 0}
     second:
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -6768,6 +6747,15 @@ Tilemap:
     second:
       m_TileIndex: 5
       m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 4, y: -1, z: 0}
+    second:
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
