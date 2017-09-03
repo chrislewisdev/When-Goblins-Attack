@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712050043965262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.84, y: -18.25, z: 0}
+  m_LocalPosition: {x: -4.775795, y: -1.8654431, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -157,15 +157,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3699bedc70eb6fb43ad3d381f9338df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AggroRange: 5
-  TargetLayer:
-    serializedVersion: 2
-    m_Bits: 512
   SmoothTime: 0.5
   MaxSpeed: 2.5
   GoodEnoughRange: 1
   SlowdownSpeed: 0.25
-  DrawGizmos: 0
+  DrawGizmos: 1
+  AggroRange: 30
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &114996629674854488
 MonoBehaviour:
   m_ObjectHideFlags: 1
