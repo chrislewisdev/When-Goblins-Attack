@@ -15,6 +15,8 @@ public class LifeController : MonoBehaviour
 	public float Health { get; private set; }
 
 	private Animator animator;
+	private new Rigidbody2D rigidbody;
+	private new Collider2D collider;
 
     // Use this for initialization
     void Start()
@@ -23,6 +25,8 @@ public class LifeController : MonoBehaviour
 		Health = BaseHealth;
 
 		animator = GetComponent<Animator>();
+		rigidbody = GetComponent<Rigidbody2D>();
+		collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -47,7 +51,9 @@ public class LifeController : MonoBehaviour
 				}
 
 				IsAlive = false;
-				GetComponent<Rigidbody2D>().simulated = false;
+
+				if (rigidbody) rigidbody.simulated = false;
+				if (collider) collider.enabled = false;
 
 				GameObject.Destroy(gameObject, DeathLength);
 			}
