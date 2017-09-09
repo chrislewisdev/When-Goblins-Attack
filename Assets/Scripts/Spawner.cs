@@ -6,26 +6,12 @@ public class Spawner : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject ObjectToSpawn;
-	[SerializeField]
-	private float SpawnTime = 3f;
     [SerializeField]
     private float Width = 1f;
 	[SerializeField]
     private float Height = 1f;
 	[SerializeField]
     private bool DrawGizmos = true;
-
-    // Use this for initialization
-    void Start()
-    {
-		InvokeRepeating("Spawn", SpawnTime + Random.Range(0f, 1f), SpawnTime);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
 	private void Spawn()
 	{

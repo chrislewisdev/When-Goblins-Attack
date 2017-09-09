@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4139072089295690}
   - component: {fileID: 195916686212048736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NavGoblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e31e4eaffbb264a963a1cbf5dd7f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AggroRange: 5
+  AggroRange: 30
   TargetLayer:
     serializedVersion: 2
     m_Bits: 512

@@ -55,6 +55,11 @@ public class LifeController : MonoBehaviour
 
 				if (!transform.parent) GameObject.Destroy(gameObject, DeathLength);
 				else GameObject.Destroy(transform.parent.gameObject, DeathLength);
+
+				if (LayerMask.LayerToName(gameObject.layer) == "Enemy") 
+				{
+					Events.FireEnemyDied();
+				}
 			}
 		}
 	}
