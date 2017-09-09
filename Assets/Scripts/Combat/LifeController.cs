@@ -11,6 +11,8 @@ public class LifeController : MonoBehaviour
 	private float BaseHealth = 5f;
 	[SerializeField]
 	private AudioClip DeathSound;
+	[SerializeField]
+	private bool IsChildObject = false;
 
 	public bool IsAlive { get; private set; }
 	public float Health { get; private set; }
@@ -53,8 +55,10 @@ public class LifeController : MonoBehaviour
 				if (collider) collider.enabled = false;
 				if (navMeshAgent) navMeshAgent.enabled = false;
 
-				if (!transform.parent) GameObject.Destroy(gameObject, DeathLength);
-				else GameObject.Destroy(transform.parent.gameObject, DeathLength);
+				if (!transform.parent || !IsChildObject) 
+					GameObject.Destroy(gameObject, DeathLength);
+				else 
+					GameObject.Destroy(transform.parent.gameObject, DeathLength);
 
 				if (LayerMask.LayerToName(gameObject.layer) == "Enemy") 
 				{

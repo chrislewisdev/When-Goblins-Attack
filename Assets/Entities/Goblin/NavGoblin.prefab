@@ -201,6 +201,7 @@ MonoBehaviour:
   DeathLength: 3
   BaseHealth: 2
   DeathSound: {fileID: 8300000, guid: 696e1b57768c3354cb4fcbf4f377884a, type: 3}
+  IsChildObject: 1
 --- !u!195 &195916686212048736
 NavMeshAgent:
   m_ObjectHideFlags: 1
