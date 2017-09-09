@@ -9312,8 +9312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waves:
-  - enemyCount: 10
-    duration: 15
+  - enemyCount: 30
+    duration: 20
   - enemyCount: 15
     duration: 15
   - enemyCount: 20
