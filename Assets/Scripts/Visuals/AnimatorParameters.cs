@@ -18,7 +18,7 @@ public class AnimatorParameters : MonoBehaviour
 		lifeController = GetComponent<LifeController>();
 		attackController = GetComponent<AttackController>();
 		animator = GetComponent<Animator>();
-		if (transform.parent) navMeshAgent = transform.parent.GetComponent<NavMeshAgent>();
+		navMeshAgent = GetComponentInParent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame

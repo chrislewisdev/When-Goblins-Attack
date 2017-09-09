@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 61885898969528792}
   - component: {fileID: 114691564095445826}
   - component: {fileID: 114264782752537862}
+  - component: {fileID: 114533371838253400}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Untagged
@@ -148,6 +149,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   AttackSound: {fileID: 8300000, guid: b6decd230ae8658408becbc25d5e6bce, type: 3}
+--- !u!114 &114533371838253400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520123810841706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e31e4eaffbb264a963a1cbf5dd7f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AggroRange: 5
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  DrawGizmos: 0
 --- !u!114 &114615899854200392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,7 +214,7 @@ NavMeshAgent:
   m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

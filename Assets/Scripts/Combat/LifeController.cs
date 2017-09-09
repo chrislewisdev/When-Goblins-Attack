@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LifeController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class LifeController : MonoBehaviour
 	private Animator animator;
 	private new Rigidbody2D rigidbody;
 	private new Collider2D collider;
+	private NavMeshAgent navMeshAgent;
 
     // Use this for initialization
     void Start()
@@ -27,12 +29,7 @@ public class LifeController : MonoBehaviour
 		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody2D>();
 		collider = GetComponent<Collider2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+		navMeshAgent = GetComponentInParent<NavMeshAgent>();
     }
 
 	public void ReceiveDamage()
@@ -54,8 +51,10 @@ public class LifeController : MonoBehaviour
 
 				if (rigidbody) rigidbody.simulated = false;
 				if (collider) collider.enabled = false;
+				if (navMeshAgent) navMeshAgent.enabled = false;
 
-				GameObject.Destroy(gameObject, DeathLength);
+				if (!transform.parent) GameObject.Destroy(gameObject, DeathLength);
+				else GameObject.Destroy(transform.parent.gameObject, DeathLength);
 			}
 		}
 	}
