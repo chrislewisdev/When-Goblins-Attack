@@ -157,6 +157,7 @@ MonoBehaviour:
   Width: 1.44
   Height: 1
   DrawGizmos: 1
+  activatedFromWave: 1
 --- !u!1 &224908262
 GameObject:
   m_ObjectHideFlags: 0
@@ -11896,6 +11897,7 @@ MonoBehaviour:
   Width: 3.78
   Height: 1
   DrawGizmos: 1
+  activatedFromWave: 0
 --- !u!1 &578779061
 GameObject:
   m_ObjectHideFlags: 0
@@ -12118,6 +12120,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f696a9479f3488b48acaf65f75848ab6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &769022383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 769022384}
+  - component: {fileID: 769022385}
+  m_Layer: 0
+  m_Name: GoblinSpawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769022384
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769022383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.13, y: -5.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1868336467}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &769022385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769022383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d904ca4cc33f08a4a977de4311c678a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: {fileID: 1147571751100478, guid: 18215dbe85489e245ba02873b46f08ab,
+    type: 2}
+  Width: 0.93
+  Height: 3.46
+  DrawGizmos: 1
+  activatedFromWave: 3
 --- !u!1001 &787572523
 Prefab:
   m_ObjectHideFlags: 0
@@ -14679,6 +14727,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478019014}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1546575939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1546575940}
+  - component: {fileID: 1546575941}
+  m_Layer: 0
+  m_Name: GoblinSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546575940
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546575939}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.34, y: -5.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1868336467}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1546575941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546575939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d904ca4cc33f08a4a977de4311c678a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawn: {fileID: 1147571751100478, guid: 18215dbe85489e245ba02873b46f08ab,
+    type: 2}
+  Width: 0.93
+  Height: 3.46
+  DrawGizmos: 1
+  activatedFromWave: 3
 --- !u!1 &1599688122
 GameObject:
   m_ObjectHideFlags: 0
@@ -15607,6 +15701,7 @@ MonoBehaviour:
   Width: 1.44
   Height: 1
   DrawGizmos: 1
+  activatedFromWave: 1
 --- !u!1 &1868336466
 GameObject:
   m_ObjectHideFlags: 0
@@ -15636,6 +15731,8 @@ Transform:
   - {fileID: 525619221}
   - {fileID: 1843264291}
   - {fileID: 188543165}
+  - {fileID: 1546575940}
+  - {fileID: 769022384}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

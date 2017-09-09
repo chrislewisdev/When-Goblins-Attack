@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -61,9 +63,11 @@ public class WaveManager : MonoBehaviour
 	{
 		enemiesKilled = 0;
 
+		IList<Spawner> activeSpawners = spawners.Where(x => currentWave >= x.ActivatedFromWave).ToList();
+
 		for (int i = 0; i < wave.EnemyCount; i++)
 		{
-			Spawner spawner = spawners[Random.Range(0, spawners.Length)];
+			Spawner spawner = activeSpawners[Random.Range(0, activeSpawners.Count)];
 			spawner.Invoke("Spawn", Random.Range(0, wave.Duration));
 		}
 

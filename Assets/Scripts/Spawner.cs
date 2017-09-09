@@ -12,6 +12,9 @@ public class Spawner : MonoBehaviour
     private float Height = 1f;
 	[SerializeField]
     private bool DrawGizmos = true;
+    [SerializeField]
+    private int activatedFromWave = 0;
+    public int ActivatedFromWave { get { return activatedFromWave; } }
 
 	private void Spawn()
 	{
