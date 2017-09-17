@@ -4,6 +4,7 @@ using UnityEngine;
 
 public delegate void EnemyDied();
 public delegate void WaveStarted(int enemyCount);
+public delegate void CoinPickedUp();
 
 public class Events
 {
@@ -17,5 +18,11 @@ public class Events
 	public static void FireWaveStarted(int enemyCount)
 	{
 		if (WaveStarted != null) WaveStarted(enemyCount);
+	}
+
+	public static event CoinPickedUp CoinPickedUp;
+	public static void FireCoinPickedUp()
+	{
+		if (CoinPickedUp != null) CoinPickedUp();
 	}
 }

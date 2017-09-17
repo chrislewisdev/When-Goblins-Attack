@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4139072089295690}
   - component: {fileID: 195916686212048736}
+  - component: {fileID: 114330678631327000}
   m_Layer: 8
   m_Name: NavGoblin
   m_TagString: Untagged
@@ -162,6 +163,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   AttackSound: {fileID: 8300000, guid: b6decd230ae8658408becbc25d5e6bce, type: 3}
+--- !u!114 &114330678631327000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147571751100478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3518ed31c0131d42bccfdd0a8a96f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DropChance: 0.4
+  PrefabToSpawn: {fileID: 1507499450112970, guid: 11542dd08f7455648aec282ade4d0732,
+    type: 2}
 --- !u!114 &114533371838253400
 MonoBehaviour:
   m_ObjectHideFlags: 1
